@@ -1,5 +1,8 @@
 import { Header } from './Header';
+import { Dashboard } from './Dashboard';
+
 import './App.css'
+
 import { useState } from 'react' 
 
 export function App() {
@@ -24,9 +27,7 @@ export function App() {
   return (
     <>
       <Header />
-      <div>
-        {console.log(tasks)}
-      </div>
+      <Dashboard />
     </>
   )
 }
