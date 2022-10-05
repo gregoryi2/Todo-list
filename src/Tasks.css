@@ -1,0 +1,42 @@
+.tasks {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    background: var(--gray-500);
+    border: 1px solid var(--gray-400);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.tasks + .tasks {
+    margin-top: 0.75rem;
+}
+
+.tasks input[type=checkbox] {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border: 1px solid;
+    border-radius: 1rem;
+}
+
+.tasks p {
+    color: var(--gray-100);
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 0.9rem;
+
+    width: 39.2rem;
+    height: 2.5rem;
+
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+}
+
+.tasks button {
+    color: var(--gray-300);
+    background: transparent;
+    border: 0px solid transparent;
+    cursor: pointer;
+}
