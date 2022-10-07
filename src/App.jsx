@@ -1,28 +1,7 @@
 import { Header } from './Header';
-import { Dashboard } from './Dashboard';
-
-import './App.css'
-
-import { useState } from 'react' 
+import { Dashboard } from './Dashboard'; 
 
 export function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "Teste - 1",
-      isComplet: true
-    },
-    {
-      id: 2,
-      title: "Teste - 2",
-      isComplet: true
-    },
-    {
-      id: 3,
-      title: "Teste - 3",
-      isComplet: true
-    }
-  ]);
 
   return (
     <>

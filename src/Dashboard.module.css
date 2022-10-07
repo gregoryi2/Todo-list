@@ -53,13 +53,15 @@
     padding: 1rem;
     border: 1px solid var(--blue-dark);
     border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btnCriar:hover {
+    opacity: 0.8;
+    transform: 2s;
 }
 
 .btnCriar img {
-    margin-left: 0.5rem;
-}
-
-PlusCircle {
     margin-left: 0.5rem;
 }
 

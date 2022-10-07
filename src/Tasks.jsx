@@ -1,39 +1,23 @@
-import { Trash } from "phosphor-react";
+import { Check, Trash } from "phosphor-react";
+import styles from './Tasks.module.css';
 
-import './Tasks.css';
+export function Tasks({ content, deleteTask, taskComplete }) {
 
-export function Tasks() {
+    function deletar() {
+        deleteTask(content);
+    }
+
+    function capturarConcluido() {
+        taskComplete();
+    }
+
     return (
-        <div>
-            <div className='tasks'>
-                <input type="checkbox" />
-                <p>Terminar esse projeto essa semana de preferência.</p>
-                <button type="submit"><Trash size={20} /></button>
-            </div>
-
-            <div className='tasks'>
-                <input type="checkbox" />
-                <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-                <button type="submit"><Trash size={20} /></button>
-            </div>
-            
-            <div className='tasks'>
-                <input type="checkbox" />
-                <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-                <button type="submit"><Trash size={20} /></button>
-            </div>
-            
-            <div className='tasks'>
-                <input type="checkbox" />
-                <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-                <button type="submit"><Trash size={20} /></button>
-            </div>
-            
-            <div className='tasks'>
-                <input type="checkbox" />
-                <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-                <button type="submit"><Trash size={20} /></button>
-            </div>
+        <div className={styles.tasks}>
+            <input onChange={capturarConcluido} type="checkbox" />
+            <p>{content.title}</p>
+            <button type="submit">
+                <Trash size={20} onClick={deletar} />
+            </button>
         </div>
     )
 }
