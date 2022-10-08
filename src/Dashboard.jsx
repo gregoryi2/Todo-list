@@ -56,7 +56,6 @@ export function Dashboard() {
         setTasks([...tasks, newTask]);
     }
 
-
     function taskComplete() {
         const checkedComplete = event.target.checked;
 
@@ -108,7 +107,6 @@ export function Dashboard() {
                     </div> 
                 </div>
 
-                {/* O componente Empyt está com display none. */}
                 <Empyt />
 
                 {tasks.map(task => {
