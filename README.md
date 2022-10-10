@@ -1,5 +1,5 @@
 # Todo-list
-<img width="30" src="https://raw.githubusercontent.com/gregoryi2/Todo-list/master/Logo.jpeg">
+<img width="150" src="https://raw.githubusercontent.com/gregoryi2/Todo-list/master/Logo.jpeg">
 
 Primeiro desafio do Bootcamp Rocketseat.
 
