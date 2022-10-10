@@ -1,7 +1,14 @@
 import { Trash } from "phosphor-react";
+import { useState } from "react";
 import styles from './Tasks.module.css';
 
 export function Tasks({ content, deleteTask, taskComplete }) {
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    function handleOnChecked() {
+        setIsChecked(!isChecked);
+    }
 
     function deletar() {
         deleteTask(content);
@@ -9,13 +16,16 @@ export function Tasks({ content, deleteTask, taskComplete }) {
 
     function capturarConcluido() {
         taskComplete();
+        handleOnChecked();
     }
 
     return (
         <div className={styles.tasks}>
             <label className={styles.container}>
                 <input onChange={capturarConcluido} type="checkbox" />
-                <p>{content.title}</p>
+                {
+                    (isChecked == true) ? <p className={styles.concluido}>{content.title}</p> : <p>{content.title}</p>
+                }
                 <button type="submit">
                     <Trash size={20} onClick={deletar} />
                 </button>

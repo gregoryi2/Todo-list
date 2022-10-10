@@ -9,31 +9,31 @@ import { v4 as uuidv4 } from 'uuid';
 export function Dashboard() {
 
     const [tasks, setTasks] = useState([
-        {
-          id: uuidv4(),
-          title: "Terminar esse projeto essa semana de preferência.",
-          isComplet: false
-        },
-        {
-          id: uuidv4(),
-          title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
-          isComplet: false
-        },
-        {
-          id: uuidv4(),
-          title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
-          isComplet: false
-        },
-        {
-          id: uuidv4(),
-          title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
-          isComplet: false
-        },
-        {
-          id: uuidv4(),
-          title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
-          isComplet: false
-        }
+        // {
+        //   id: uuidv4(),
+        //   title: "Terminar esse projeto essa semana de preferência.",
+        //   isComplet: false
+        // },
+        // {
+        //   id: uuidv4(),
+        //   title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
+        //   isComplet: false
+        // },
+        // {
+        //   id: uuidv4(),
+        //   title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
+        //   isComplet: false
+        // },
+        // {
+        //   id: uuidv4(),
+        //   title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
+        //   isComplet: false
+        // },
+        // {
+        //   id: uuidv4(),
+        //   title: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
+        //   isComplet: false
+        // }
     ]);
 
     const totalTasks = tasks.length;
@@ -73,6 +73,9 @@ export function Dashboard() {
         })
 
         setTasks(novoArraySemTaskDeletada);
+
+        completes.pop()
+        setCompletes([...completes]);
     }
 
     return(
@@ -107,7 +110,7 @@ export function Dashboard() {
                     </div> 
                 </div>
 
-                <Empyt />
+                {(totalTasks == 0) ? <Empyt /> : ''}
 
                 {tasks.map(task => {
                     return(
@@ -118,8 +121,7 @@ export function Dashboard() {
                             taskComplete={taskComplete}
                         />
                     )
-                })}
-                
+                })}            
             </div>
         </div>
     )

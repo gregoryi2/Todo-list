@@ -86,10 +86,10 @@
     margin-left: 0.75rem;
 }
 
-/* .concluido {
+.concluido {
     text-decoration: line-through;
     color: var(--gray-300) !important;
-} */
+}
 
 .tasks .container button {
     color: var(--gray-300);
