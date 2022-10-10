@@ -2,6 +2,8 @@
 <img width="150" src="https://raw.githubusercontent.com/gregoryi2/Todo-list/master/Logo.jpeg">
 
 Primeiro desafio do Bootcamp Rocketseat.
+<br>
+Projeto criado com React e CSS module.
 
 Funcionalidades:
 
